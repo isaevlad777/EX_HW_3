@@ -8,6 +8,14 @@ import static org.openqa.selenium.By.id;
 
 public class SecondTests {
 
+    @BeforeAll
+    static void beforeAll (){
+        Configuration.baseUrl ="https://demoqa.com";
+        Configuration.browserSize = "1920x1080";
+        Configuration.holdBrowserOpen = true;
+        Configuration.pageLoadStrategy = "none";
+    }
+
     @Test
     void test1 (){
         open("/automation-practice-form");
@@ -16,11 +24,5 @@ public class SecondTests {
         $(id("userEmail")).setValue("test@test.ru");
     }
 
-    @BeforeAll
-    static void beforeAll (){
-        Configuration.baseUrl ="https://demoqa.com";
-        Configuration.browserSize = "1920x1080";
-        Configuration.holdBrowserOpen = true;
-        Configuration.pageLoadStrategy = "none";
-    }
+
 }
