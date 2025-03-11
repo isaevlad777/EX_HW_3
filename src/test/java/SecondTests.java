@@ -49,7 +49,7 @@ public class SecondTests {
         $(xpath("//td[text()='Student Name']/following::td[1]")).shouldHave(text("Vladislav Isaev"));
 
         //$(byTagAndText("td", "Student Name"));
-        //
+        //gertert
 
     }
 
